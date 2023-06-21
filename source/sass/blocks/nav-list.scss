@@ -7,6 +7,10 @@
     letter-spacing: 0.02em;
   }
 
+  @include desktop-width {
+    gap: 20px;
+  }
+
   &--site {
     display: none;
 
@@ -19,16 +23,15 @@
     .nav-list__link {
       padding: 22px;
     }
-
-    @include tablet-width {
-      margin-left: 60px;
-      margin-right: 20px;
-    }
   }
 }
 
 .nav-list__text {
   display: none;
+
+  @include desktop-width {
+    display: block;
+  }
 }
 
 .nav-list__link {
@@ -58,6 +61,13 @@
       background-color: $primary;
 
       content: "";
+    }
+  }
+
+  &--user {
+    @include desktop-width {
+      display: flex;
+      gap: 5px;
     }
   }
 }

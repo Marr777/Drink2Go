@@ -1,0 +1,57 @@
+.swiper {
+  position: relative;
+}
+
+.swiper__button {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  width: 20px;
+  height: 656px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &--next {
+    transform: rotate(180deg);
+    right: 0;
+  }
+
+  @include tablet-width {
+    width: 80px;
+    height: 640px;
+  }
+
+  @include desktop-width {
+    height: 714px;
+  }
+
+  &:hover {
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper__button-icon {
+  margin: 0 auto;
+
+  fill: $primary;
+}
+
+.swiper__wrapper {
+  width: 100vw;
+}
+
+.swiper__pagination {
+  display: none;
+
+  @include desktop-width {
+    display: block;
+  }
+}

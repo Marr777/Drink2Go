@@ -8,10 +8,34 @@
 
 .page-header {
   justify-content: space-between;
+
+  @include tablet-width {
+    margin: 0 auto;
+    gap: 66px;
+  }
+
+  @include desktop-width {
+    gap: 162px;
+  }
 }
+
+.page-header__nav {
+  @include tablet-width {
+    gap: 60px;
+  }
+
+  @include desktop-width {
+    gap: 162px;
+  }
+}
+
 
 .page-header__logo-container {
   margin-left: 20px;
+
+  @include tablet-width {
+    margin: 0;
+  }
 }
 
 .page-header__nav-list {

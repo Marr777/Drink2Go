@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/montserrat-medium.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -42,7 +43,7 @@
       </ul>
       <ul class="page-header__nav-list nav-list nav-list--user">
         <li class="nav-list__item">
-          <a class="nav-list__link" href="">
+          <a class="nav-list__link nav-list__link--user" href="">
             <svg class="nav-list__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <use href="img/icons/stack.svg#authorize-icon" />
             </svg>
@@ -50,7 +51,7 @@
           </a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" href="">
+          <a class="nav-list__link nav-list__link--user" href="">
             <svg class="nav-list__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <use href="img/icons/stack.svg#cart-icon" />
             </svg>
@@ -70,62 +71,71 @@
     <h1 class="main-title visually-hidden">Интернет-магазин кофейных напитков Drink to go</h1>
     <section class="promo">
       <h2 class="promo__title visually-hidden">Наши предложения</h2>
-      <div class="promo__slider slider swiper mySwiper">
-        <div class="swiper-wrapper">
-          <ul class="slider__list">
-            <li class="slider__item slider-item swiper-slide">
+      <div class="promo__slider swiper">
+        <ul class="swiper__wrapper swiper-wrapper promo__list">
+          <li class="swiper__item promo__item promo__item--flat">
+            <div class="promo__item-container">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
+                <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
                   srcset="img/slider/decaf-desktop.webp 1x, img/slider/decaf-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
+                <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/decaf-tablet.webp 1x, img/slider/decaf-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/decaf-mobile.webp 1x, img/slider/decaf-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" width="600" height="600"
                   srcset="img/slider/decaf-desktop.png 1x, img/slider/decaf-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/decaf-tablet.png 1x, img/slider/decaf-tablet@2x.png 2x">
-                <img class="slider-item__image" src="img/slider/decaf-mobile.png"
-                  srcset="img/slider/decaf-mobile@2x.png 2x" width="280" height="280" alt="Кофе Декаф Флэт Уайт">
+                <img class="promo__image" src="img/slider/decaf-mobile.png" srcset="img/slider/decaf-mobile@2x.png 2x"
+                  width="280" height="280" alt="Кофе Декаф Флэт Уайт">
               </picture>
-              <b class="slider-item__description">Новинка!</b>
-              <h3 class="slider-item__title">Декаф Флэт Уайт</h3>
-              <p class="slider-item__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
-                молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              <div class="slider-item__price-wrapper">
-                <span class="slider-item__price slider-item__price--old">295₽</span>
-                <b class="slider-item__price slider-item__price--new">225₽</b>
+              <div class="promo__item-info">
+                <b class="promo__highlight">Новинка!</b>
+                <h3 class="promo__item-title">Декаф Флэт Уайт</h3>
+                <p class="promo__item-description">Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
+                  фермерским&nbsp;молоком&nbsp;—&nbsp;то, что нужно для&nbsp;расслабления&nbsp;после
+                  тяжёлого&nbsp;рабочего дня</p>
+                <div class="promo__order-wrapper">
+                  <span class="promo__price-old">295₽</span>
+                  <b class="promo__price-new">225₽</b>
+                  <button class="promo__button button button--primary" type="button">Заказать</button>
+                </div>
               </div>
-              <button class="slider-item__button" type="button">Заказать</button>
-            </li>
-            <li class="slider__item slider-item swiper-slide">
+            </div>
+          </li>
+          <li class="swiper__item promo__item promo__item--lavender">
+            <div class="promo__item-container">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
+                <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
                   srcset="img/slider/latte-desktop.webp 1x, img/slider/latte-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
+                <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/latte-tablet.webp 1x, img/slider/latte-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/slider/latte-mobile.webp 1x, img/slider/latte-mobile@2x.webp 2x">
                 <source media="(min-width: 1440px)" width="600" height="600"
                   srcset="img/slider/latte-desktop.png 1x, img/slider/latte-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/latte-tablet.png 1x, img/slider/latte-tablet@2x.png 2x">
-                <img class="slider-item__image" src="img/slider/latte-mobile.png"
-                  srcset="img/slider/latte-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый Латте">
+                <img class="promo__image" src="img/slider/latte-mobile.png" srcset="img/slider/latte-mobile@2x.png 2x"
+                  width="280" height="280" alt="Лавандовый Латте">
               </picture>
-              <b class="slider-item__description">Новинка!</b>
-              <h3 class="slider-item__title">Лавандовый Латте</h3>
-              <p class="slider-item__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              <div class="slider-item__price-wrapper">
-                <span class="slider-item__price slider-item__price--old">285₽</span>
-                <b class="slider-item__price slider-item__price--new">265₽</b>
+              <div class="promo__item-info">
+                <b class="promo__highlight">Новинка!</b>
+                <h3 class="promo__item-title">Лавандовый Латте</h3>
+                <p class="promo__item-description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы
+                  и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                <div class="promo__order-wrapper">
+                  <span class="promo__price-old">285₽</span>
+                  <b class="promo__price-new">265₽</b>
+                  <button class="promo__button  button button--primary" type="button">Заказать</button>
+                </div>
               </div>
-              <button class="slider-item__button" type="button">Заказать</button>
-            </li>
-            <li class="slider__item slider-item swiper-slide">
+            </div>
+          </li>
+          <li class="swiper__item promo__item  promo__item--espresso">
+            <div class="promo__item-container">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
+                <source type="image/webp" media="(min-width: 1440px)" width="600" height="600"
                   srcset="img/slider/espresso-desktop.webp 1x, img/slider/espresso-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
+                <source type="image/webp" media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/espresso-tablet.webp 1x, img/slider/espresso-tablet@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/slider/espresso-mobile.webp 1x, img/slider/espresso-mobile@2x.webp 2x">
@@ -133,28 +143,35 @@
                   srcset="img/slider/espresso-desktop.png 1x, img/slider/espresso-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" width="476" height="476"
                   srcset="img/slider/espresso-tablet.png 1x, img/slider/espresso-tablet@2x.png 2x">
-                <img class="slider-item__image" src="img/slider/espresso-mobile.png"
+                <img class="promo__image" src="img/slider/espresso-mobile.png"
                   srcset="img/slider/espresso-mobile@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо">
               </picture>
-              <b class="slider-item__description">Новинка!</b>
-              <h3 class="slider-item__title">Тройной Эспрессо</h3>
-              <p class="slider-item__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
-                эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              <div class="slider-item__price-wrapper">
-                <span class="slider-item__price slider-item__price--old">395₽</span>
-                <b class="slider-item__price slider-item__price--new">375₽</b>
+              <div class="promo__item-info">
+                <b class="promo__highlight">Новинка!</b>
+                <h3 class="promo__item-title">Тройной Эспрессо</h3>
+                <p class="promo__item-description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                  эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                <div class="promo__order-wrapper">
+                  <span class="promo__price-old">3985₽</span>
+                  <b class="promo__price-new">375₽</b>
+                  <button class="promo__button button button--primary" type="button">Заказать</button>
+                </div>
               </div>
-              <button class="slider-item__button" type="button">Заказать</button>
-            </li>
-          </ul>
-          <button class="slider__button swiper-button-next" type="button">
-            <span class="visually-hidden">Следующий товар.</span>
-          </button>
-          <button class="slider__button swiper-button-prev" type="button">
-            <span class="visually-hidden">Предыдущий товар.</span>
-          </button>
-          <div class="slider__pagination swiper-pagination" type="button"></div>
-        </div>
+            </div>
+          </li>
+        </ul>
+        <button class="swiper__button swiper__button--prev" type="button">
+          <span class="visually-hidden">Предыдущий товар.</span>
+          <svg class="swiper__button-icon" width="11" height="20" viewBox="0 0 11 20" fill="none">
+            <use href="img/icons/stack.svg#slider-arrow" />
+          </svg>
+        </button>
+        <button class="swiper__button swiper__button--next" type="button">
+          <svg class="swiper__button-icon" width="11" height="20" viewBox="0 0 11 20" fill="none">
+            <use href="img/icons/stack.svg#slider-arrow" />
+          </svg>
+        </button>
+        <div class="swiper__pagination"></div>
       </div>
     </section>
     <section class="advantages">
@@ -451,8 +468,7 @@
       Разработано в HTML Academy
     </a>
   </footer>
-
-  <script src="./js/script.js" defer></script>
+  <script src="js/script.js" defer type="module"></script>
 </body>
 
 </html>
