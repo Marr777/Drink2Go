@@ -1,0 +1,22 @@
+.map__image {
+  width: 100%;
+  height: auto;
+}
+
+.map__container {
+  &--nojs {
+    display: none;
+  }
+
+  height: 420px;
+  width: 100%;
+
+  @include tablet-width {
+    height: 480px;
+  }
+
+  @include desktop-width {
+    height: 540px;
+  }
+}
+

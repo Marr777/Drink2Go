@@ -11,6 +11,7 @@
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
+  <link rel="stylesheet" href="vendor//leaflet/leaflet.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -424,7 +425,25 @@
         </li>
       </ol>
     </section>
-    <section class="map"></section>
+    <section class="map">
+      <h2 class="map__title visually-hidden">Карта расположения магазина Drink2Go.</h2>
+      <a class="map__link" href="https://goo.gl/maps/9gayrVNhWbzY7jWU7">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" width="1440" height="540"
+            srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" width="768" height="480"
+            srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" width="1440" height="540"
+            srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="768" height="480"
+            srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+          <img class="map__image" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x"
+            width="320" height="420" alt="Санкт-Петербург, набережная реки карповки, 5">
+        </picture>
+      </a>
+      <div class="map__container map__container--nojs" id="map"></div>
+    </section>
   </main>
   <footer class="page__footer footer">
     <div class="footer__links">
