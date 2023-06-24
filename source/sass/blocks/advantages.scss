@@ -1,0 +1,159 @@
+.advantages__container {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+
+  @include tablet-width {
+    padding-top: 60px;
+    padding-bottom: 101px;
+  }
+
+  @include desktop-width {
+    padding-top: 101px;
+    padding-bottom: 119px;
+  }
+}
+
+.advantages__title {
+  margin: 0 0 4px;
+
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $primary;
+}
+
+.advantages__subtitle {
+  margin: 0 0 102px;
+
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @include tablet-width {
+    margin-bottom: 60px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @include desktop-width {
+    margin-bottom: 156px;
+  }
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 98px;
+
+  list-style: none;
+
+  @include tablet-width {
+    width: 92%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 63px;
+    row-gap: 50px;
+    column-gap: 107px;
+  }
+
+  @include desktop-width {
+    gap: 30px;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  &::before {
+    position: absolute;
+    top: -66px;
+
+    margin: 0 auto;
+
+    width: 52px;
+    height: 56px;
+
+    content: "";
+  }
+
+  &--speed::before {
+    background-image: url("../../img/icons/stack.svg#advantage-speed");
+  }
+
+  &--comfort::before {
+    background-image: url("../../img/icons/stack.svg#advantage-comfort");
+  }
+
+  &--energy::before {
+    background-image: url("../../img/icons/stack.svg#advantage-energy");
+  }
+
+  &--eco::before {
+    background-image: url("../../img/icons/stack.svg#advantage-eco");
+  }
+
+  @include tablet-width {
+    width: 37%;
+    align-items: start;
+    gap: 10px;
+
+    &::before {
+      top: 0;
+      left: -71px;
+    }
+  }
+
+  @include desktop-width {
+    align-items: center;
+    width: 22%;
+
+    &::before {
+      left: 0;
+      right: 0;
+      top: -79px;
+  }
+}
+}
+
+.advantages__item-title {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 32px;
+
+  @include tablet-width {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.advantages__item-description {
+  margin: 0;
+
+  text-align: center;
+
+  @include tablet-width {
+    text-align: start;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include desktop-width {
+    text-align: center;
+  }
+}

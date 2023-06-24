@@ -52,6 +52,23 @@
   display: none;
 
   @include desktop-width {
-    display: block;
+    position: absolute;
+    transform: translateY(-61px);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+.swiper__bullet {
+  width: 62px;
+  height: 4px;
+
+  background-color: $white;
+
+  &--active {
+    background-color: $primary;
   }
 }

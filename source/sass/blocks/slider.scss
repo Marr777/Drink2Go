@@ -1,0 +1,98 @@
+.slider__inputs-wrapper {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  &::after {
+    position: relative;
+
+    width: 8px;
+    height: 2px;
+    order: 1;
+
+    background-color: $grey;
+
+    content: "";
+  }
+
+  @include desktop-width {
+    gap: 22px;
+  }
+}
+
+
+.slider__input {
+  width: 42%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+
+  font-family: $montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+  text-align: center;
+
+  border: 2px solid #9070EC;
+  border-radius: 4px;
+
+  &--min {
+    order: 0;
+  }
+
+  &--max {
+    order: 2;
+  }
+}
+
+.slider__range {
+  margin-bottom: 24px;
+}
+
+.slider__target {
+  width: 100%;
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  background-color: $light-grey;
+  border: none;
+  box-shadow: none;
+
+  @include tablet-width {
+    margin-bottom: 30px;
+  }
+}
+
+.slider__horizontal {
+  .slider__handle {
+    top: -10px;
+
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid $primary-lighter;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: none;
+
+    cursor: pointer;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+
+
+.slider__connect {
+  background: $primary-lighter;
+}

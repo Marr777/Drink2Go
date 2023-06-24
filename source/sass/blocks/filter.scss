@@ -1,0 +1,56 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 38px;
+
+  @include tablet-width {
+    display: grid;
+    grid-template-columns: 1fr 223px 223px;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 40px;
+    max-width: 997px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop-width {
+    display: flex;
+    row-gap: 32px;
+  }
+}
+
+.filter__group {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.filter__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet-width {
+    flex-direction: row;
+    grid-column: 1/-1;
+    justify-content: center;
+  }
+
+  @include desktop-width {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5px;
+  }
+}
+
+// // .filter__button {
+// //   @include desktop-width {
+// //     padding: 8px 26px;
+
+
+// //   }
+// }

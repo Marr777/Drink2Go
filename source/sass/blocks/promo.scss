@@ -45,6 +45,11 @@
 
   @include desktop-width {
     padding-top: 9px;
+    padding-bottom: 84px;
+  }
+
+  @include small-screen {
+    min-width: 320px;
   }
 }
 
@@ -67,10 +72,15 @@
   @include desktop-width {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 27px;
 
     margin: 0 auto;
+  }
+
+  @include small-screen {
+    min-width: 320px;
   }
 }
 
@@ -85,7 +95,7 @@
   }
 
   @include desktop-width {
-    margin-left: 106px;
+    margin-left: 79px;
   }
 }
 
@@ -174,4 +184,8 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
+
+  @include desktop-width {
+    margin-right: 22px;
+  }
 }
