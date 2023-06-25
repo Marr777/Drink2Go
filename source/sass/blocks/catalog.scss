@@ -145,7 +145,8 @@
 
   display: grid;
   grid-template-columns: repeat(5, 40px);
-  column-gap: 20px;
+  gap: 20px;
+  grid-auto-rows: auto;
   justify-content: center;
 
   list-style: none;

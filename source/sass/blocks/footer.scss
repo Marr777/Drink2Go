@@ -54,6 +54,7 @@
 
 .footer__socials-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
   margin: 0;
@@ -63,6 +64,7 @@
 }
 
 .footer__social-link {
+  display: block;
   padding: 10px;
 
   border-radius: 4px;
@@ -105,7 +107,7 @@
 
   @include desktop-width {
     margin-top: 8px;
-    column-gap: 22px;
+    gap: 22px;
   }
 }
 
@@ -158,6 +160,8 @@
 
 .footer__social-icon,
 .footer__copyright-icon {
+  display: block;
+
   fill: $grey;
 
   transition: fill 0.2s;

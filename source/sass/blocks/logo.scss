@@ -12,6 +12,7 @@
 }
 
 .logo__link {
+  display: block;
   width: fit-content;
 
   @include desktop-width {
@@ -19,4 +20,8 @@
     align-items: center;
     gap: 20px;
   }
+}
+
+.logo__image {
+  display: block;
 }

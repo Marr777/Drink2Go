@@ -66,6 +66,7 @@
 }
 
 .nav-list__link {
+  display: block;
   padding: 20px;
 
   color: $black;
@@ -142,6 +143,8 @@
 }
 
 .nav-list__icon {
+  display: block;
+
   fill: $black;
 
   transition: fill 0.1s;
