@@ -72,16 +72,6 @@
 
   transition: background-color 0.2s;
 
-  @include hover-device {
-    &:hover {
-      background-color: $secondary;
-
-      .footer__social-icon {
-        fill: $primary;
-      }
-    }
-  }
-
   &:focus {
     background-color: $secondary;
 
@@ -94,6 +84,16 @@
     background-color: $primary-opacity;
 
     .footer__social-icon {
+      fill: $primary;
+    }
+  }
+}
+
+@include hover-device {
+  .footer__social-link:hover {
+    background-color: $secondary;
+
+    & > .footer__social-icon {
       fill: $primary;
     }
   }

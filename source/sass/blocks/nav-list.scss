@@ -22,7 +22,6 @@
     .nav-list__item {
       box-sizing: border-box;
       width: 100%;
-      // padding: 20px;
 
       text-align: center;
 
@@ -47,12 +46,6 @@
 
         border: none;
       }
-    }
-  }
-
-  &--user {
-    .nav-list__link {
-      padding: 22px;
     }
   }
 }

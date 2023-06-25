@@ -17,12 +17,6 @@
 
     transition: 0.1s;
 
-    @include hover-device {
-      &:hover {
-        background-color: $primary-lighter;
-      }
-    }
-
     &:focus {
       background-color: $primary-lighter;
     }
@@ -43,14 +37,6 @@
 
     transition: 0.1s;
 
-    @include hover-device {
-      &:hover {
-        color: $white;
-
-        background-color: $primary-lighter;
-      }
-    }
-
     &:focus {
       color: $white;
 
@@ -68,5 +54,18 @@
 
       background-color: $light-grey;
     }
+  }
+}
+
+
+@include hover-device {
+  .button--primary:hover {
+    background-color: $primary-lighter;
+  }
+
+  .button--secondary:hover {
+    color: $white;
+
+    background-color: $primary-lighter;
   }
 }

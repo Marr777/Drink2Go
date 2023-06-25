@@ -50,6 +50,8 @@
     grid-template-rows: min-content 1fr;
     column-gap: 30px;
     row-gap: 24px;
+    max-width: 1360px;
+    margin: 0 auto;
   }
 }
 
@@ -108,10 +110,26 @@
   text-transform: lowercase;
 
   border: none;
+  border-radius: 4px;
   background-color: transparent;
 
+  cursor: pointer;
+  transition: background-color 0.2s;
+
   @include tablet-width {
+    width: 171px;
     padding: 4px 12px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $secondary;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary;
   }
 }
 
