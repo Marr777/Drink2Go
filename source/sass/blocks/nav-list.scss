@@ -1,21 +1,53 @@
 .nav-list {
-  @include tablet-width {
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 
   @include desktop-width {
     gap: 20px;
   }
 
   &--site {
-    display: none;
+    position: absolute;
+    z-index: 4;
+
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+
+    background-color: $white;
+
+    .nav-list__item {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20px;
+
+      text-align: center;
+
+      border-bottom: 1px solid $secondary;
+
+      &--main {
+        border-top: 1px solid $secondary;
+      }
+    }
 
     @include tablet-width {
-      display: flex;
+      position: static;
+
+      flex-direction: row;
+      width: auto;
+      background-color: transparent;
+      transform: none;
+
+      .nav-list__item {
+        width: auto;
+        padding: 0;
+
+        border: none;
+      }
+
     }
   }
 
@@ -37,7 +69,7 @@
 .nav-list__link {
   color: $black;
 
-  @include tablet-width  {
+  @include tablet-width {
     padding: 32px 20px;
   }
 
@@ -46,21 +78,23 @@
   }
 
   &--current {
-    position: relative;
+    @include tablet-width {
+      position: relative;
 
-    color: $primary;
+      color: $primary;
 
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
 
-      width: 100%;
-      height: 2px;
+        width: 100%;
+        height: 2px;
 
-      background-color: $primary;
+        background-color: $primary;
 
-      content: "";
+        content: "";
+      }
     }
   }
 

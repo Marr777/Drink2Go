@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__logo-container logo">
       <a class="logo__link">
         <picture>
@@ -29,8 +29,8 @@
       </a>
     </div>
     <nav class="page-header__nav">
-      <ul class="page-header__nav-list nav-list nav-list--site">
-        <li class="nav-list__item">
+      <ul class="page-header__nav-list page-header__nav-list--site nav-list nav-list--site">
+        <li class="nav-list__item nav-list__item--main">
           <a class="nav-list__link nav-list__link--current" href="">Главная</a>
         </li>
         <li class="nav-list__item">
@@ -61,11 +61,11 @@
           </a>
         </li>
       </ul>
-      <button class="page-header__nav-toggle" type="button">
+      <button class="page-header__nav-toggle page-header__nav-toggle--open" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <span class="page-header__toggle-line page-header__toggle-line--start"></span>
-        <span class="page-header__toggle-line"></span>
-        <span class="page-header__toggle-line"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--middle"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--end"></span>
       </button>
     </nav>
   </header>
