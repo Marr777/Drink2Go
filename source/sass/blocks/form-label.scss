@@ -2,6 +2,8 @@
   display: flex;
   gap: 10px;
   align-items: center;
+
+  cursor: pointer;
 }
 
 
@@ -15,6 +17,12 @@
       &::after {
         background-color: $primary;
       }
+
+      &:disabled {
+        &::after {
+          background-color: $light-grey;
+        }
+      }
     }
 
     &--checkbox {
@@ -23,12 +31,37 @@
       &::after {
         transform: translateX(100%);
       }
+
+      &:disabled {
+        &::after {
+          background-color: $grey;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 2px $primary-lighter;
+        background-color: $primary-opacity;
+      }
     }
   }
 
   &:disabled ~ .form-label__mark {
-    &--radio {
+    cursor: default;
+
+    &--radio,
+    &--radio:hover {
       border-color: $light-grey;
+
+      &::after {
+        background-color: $white;
+      }
+    }
+
+    &--checkbox,
+    &--checkbox:hover {
+      background-color: $light-grey;
+      box-shadow: none;
     }
   }
 
@@ -43,11 +76,12 @@
 
   box-sizing: border-box;
 
+  cursor: pointer;
+
   &::after {
     position: absolute;
     content: "";
   }
-
 
   &--radio {
     width: 24px;
@@ -72,6 +106,15 @@
 
       transition: background-color 0.2s ease;
     }
+
+    &:hover,
+    &:focus {
+      border-color: $primary;
+
+      &::after {
+        background-color: $primary-opacity;
+      }
+    }
   }
 
   &--checkbox {
@@ -80,6 +123,9 @@
 
     background-color: $grey;
     border-radius: 12px;
+    box-shadow: none;
+
+    transition: box-shadow 0.2s;
 
     &::after {
       top: 1px;
@@ -97,6 +143,12 @@
       @include tablet-width {
         top: 2px;
       }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px $primary-lighter;
+      background-color: $primary-opacity;
     }
   }
 }

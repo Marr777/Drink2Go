@@ -93,11 +93,14 @@
   background-color: transparent;
   border: none;
 
+  cursor: pointer;
+
   @include tablet-width {
     display: none;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     background-color: $secondary;
   }
 

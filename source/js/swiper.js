@@ -12,6 +12,7 @@ const setSwiper = () => {
       type: 'bullets',
       bulletClass: 'swiper__bullet',
       bulletActiveClass: 'swiper__bullet--active',
+      clickable: true,
     },
     mousewheel: false,
     keyboard: true,

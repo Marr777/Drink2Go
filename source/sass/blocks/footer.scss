@@ -17,6 +17,8 @@
 }
 
 .footer__logo-description {
+  color: $black;
+
   @include desktop-width {
     width: max-content;
 
@@ -62,6 +64,37 @@
 
 .footer__social-link {
   padding: 10px;
+
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: background-color 0.2s;
+
+  @include hover-device {
+    &:hover {
+      background-color: $secondary;
+
+      .footer__social-icon {
+        fill: $primary;
+      }
+    }
+  }
+
+  &:focus {
+    background-color: $secondary;
+
+    .footer__social-icon {
+      fill: $primary;
+    }
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+
+    .footer__social-icon {
+      fill: $primary;
+    }
+  }
 }
 
 .footer__group-container {
@@ -92,10 +125,40 @@
     grid-column: 1/-1;
     padding-bottom: 0;
   }
+
+  &:hover,
+  &:focus {
+    .footer__copyright-text {
+      color: $primary;
+    }
+
+    .footer__copyright-icon {
+      fill: $primary;
+    }
+  }
+
+  &:active {
+    .footer__copyright-text {
+      color: $primary-darker;
+    }
+
+    .footer__copyright-icon {
+      fill: $primary-darker;
+    }
+  }
 }
 
 .footer__copyright-text {
   font-size: 12px;
   line-height: 16px;
   color: $grey;
+
+  transition: 0.2s;
+}
+
+.footer__social-icon,
+.footer__copyright-icon {
+  fill: $grey;
+
+  transition: fill 0.2s;
 }

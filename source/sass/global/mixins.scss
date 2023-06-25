@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin hover-device {
+  @media (hover: hover) {
+    @content;
+  }
+}

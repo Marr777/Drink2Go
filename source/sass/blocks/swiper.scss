@@ -36,6 +36,12 @@
   &:active {
     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
+
+  &:disabled {
+    .swiper__button-icon {
+      fill: $grey;
+    }
+  }
 }
 
 .swiper__button-icon {
@@ -68,7 +74,15 @@
 
   background-color: $white;
 
-  &--active {
+  cursor: pointer;
+
+  &--active,
+  &:active {
     background-color: $primary;
   }
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
 }

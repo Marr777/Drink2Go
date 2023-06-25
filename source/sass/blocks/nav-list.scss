@@ -22,7 +22,7 @@
     .nav-list__item {
       box-sizing: border-box;
       width: 100%;
-      padding: 20px;
+      // padding: 20px;
 
       text-align: center;
 
@@ -44,7 +44,6 @@
 
       .nav-list__item {
         width: auto;
-        padding: 0;
 
         border: none;
       }
@@ -67,7 +66,13 @@
 }
 
 .nav-list__link {
+  padding: 20px;
+
   color: $black;
+
+  background-color: transparent;
+
+  transition: all 0.1s;
 
   @include tablet-width {
     padding: 32px 20px;
@@ -75,6 +80,10 @@
 
   &:active {
     background-color: $secondary;
+
+    @include tablet-width {
+      color: $primary;
+    }
   }
 
   &--current {
@@ -99,9 +108,41 @@
   }
 
   &--user {
+    padding: 22px;
+
+    @include tablet-width {
+      padding: 32px 22px;
+    }
+
     @include desktop-width {
       display: flex;
       gap: 5px;
+
+      &:hover {
+        .nav-list__icon {
+          fill: $primary;
+        }
+      }
     }
   }
+
+  @include hover-device {
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &:focus {
+    color: $primary;
+
+    .nav-list__icon {
+      fill: $primary;
+    }
+  }
+}
+
+.nav-list__icon {
+  fill: $black;
+
+  transition: fill 0.1s;
 }

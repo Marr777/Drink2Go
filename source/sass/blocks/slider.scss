@@ -39,12 +39,31 @@
   border: 2px solid $primary-lighter;
   border-radius: 4px;
 
+  appearance: textfield;
+
   &--min {
     order: 0;
   }
 
   &--max {
     order: 2;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border-color: $primary-darker;
+    outline: none;
   }
 }
 
@@ -86,7 +105,41 @@
     }
 
     &::after {
-      content: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      width: 16px;
+      height: 16px;
+      margin: auto;
+
+      border-radius: 50%;
+      background-color: transparent;
+
+      content: "";
+      transition: background-color 0.1s;
+    }
+
+    @include hover-device {
+      &:hover {
+        &::after {
+          background-color: $primary-opacity;
+        }
+      }
+    }
+
+    &:focus {
+      &::after {
+        background-color: $primary-opacity;
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: $primary;
+      }
     }
   }
 }

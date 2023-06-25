@@ -14,11 +14,59 @@
     color: $white;
 
     background-color: $primary;
+
+    transition: 0.1s;
+
+    @include hover-device {
+      &:hover {
+        background-color: $primary-lighter;
+      }
+    }
+
+    &:focus {
+      background-color: $primary-lighter;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+
+    &:disabled {
+      background-color: $grey;
+    }
   }
 
   &--secondary {
     color: $primary;
 
     background-color: $white;
+
+    transition: 0.1s;
+
+    @include hover-device {
+      &:hover {
+        color: $white;
+
+        background-color: $primary-lighter;
+      }
+    }
+
+    &:focus {
+      color: $white;
+
+      background-color: $primary-lighter;
+    }
+
+    &:active {
+      color: $white;
+
+      background-color: $primary-darker;
+    }
+
+    &:disabled {
+      color: $white;
+
+      background-color: $light-grey;
+    }
   }
 }

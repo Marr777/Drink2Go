@@ -56,6 +56,17 @@
 
 .footer-group__link {
   color: $black;
+
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer-group__address {
