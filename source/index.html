@@ -22,7 +22,7 @@
         <picture>
           <source media="(min-width: 1440px)" width="170" height="36" srcset="img/logo/logo-desktop.svg">
           <source media="(min-width: 768px)" width="82" height="36" srcset="img/logo/logo-tablet.svg">
-          <img class="slider-item__image" src="img/logo/logo-mobile.svg" width="32" height="36"
+          <img class="logo__image" src="img/logo/logo-mobile.svg" width="32" height="36"
             alt="Логотип магазина Drink2Go">
         </picture>
         <b class="logo__description">Интернет-магазин кофейных напитков</b>
@@ -438,8 +438,8 @@
             srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" width="768" height="480"
             srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-          <img class="map__image" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x"
-            width="320" height="420" alt="Санкт-Петербург, набережная реки карповки, 5">
+          <img class="map__image" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320"
+            height="420" alt="Санкт-Петербург, набережная реки карповки, 5">
         </picture>
       </a>
       <div class="map__container map__container--nojs" id="map"></div>
@@ -448,93 +448,109 @@
   <footer class="page__footer footer">
     <div class="footer__links">
       <div class="footer__logo-wrapper logo">
-        <a class="logo__link">
+        <a class="footer__logo-link logo__link">
           <picture>
-            <source media="(min-width: 768px)" width="" height="" srcset="">
-            <img class="logo__image" src="" width="" height="" alt="">
+            <source media="(min-width: 768px)" width="170" height="36" srcset="img/logo/logo-desktop.svg">
+            <img class="logo__image" src="img/logo/logo-tablet.svg" width="82" height="36"
+              alt="Логотип магазина Drink2Go">
           </picture>
-          <b class="logo__description">Интернет-магазин кофейных напитков</b>
+          <b class="footer__logo-description logo__description">Интернет-магазин кофейных напитков</b>
         </a>
       </div>
       <ul class="footer__socials-list">
         <li class="footer__social-item">
-          <a class="footer__social-link" href="" aria-label="Страница Вконтакте"></a>
+          <a class="footer__social-link" href="https://vk.com/htmlacademy" aria-label="Страница Вконтакте."
+            target="_blank">
+            <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use href="img/icons/stack.svg#vk" />
+            </svg>
+          </a>
         </li>
         <li class="footer__social-item">
-          <a class="footer__social-link" href="" aria-label="Youtube канал"></a>
+          <a class="footer__social-link" href="https://ru.pinterest.com/" aria-label="Пинтерест." target="_blank">
+            <svg class="footer__social-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <use href="img/icons/stack.svg#pinterest" />
+            </svg>
+          </a>
         </li>
         <li class="footer__social-item">
-          <a class="footer__social-link" href="" aria-label="Твиттер"></a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="" aria-label="Телеграм"></a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer__navigation footer-group">
-      <h3 class="footer-group__title">Интернет-магазин</h3>
-      <ul class="footer-group__list">
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Каталог
-          </a>
-        </li>
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Доставка
-          </a>
-        </li>
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Способы оплаты
-          </a>
-        </li>
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            О нас
+          <a class="footer__social-link" href="https://ok.ru/" aria-label="Страница в Одноклассниках." target="_blank">
+            <svg class="footer__social-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <use href="img/icons/stack.svg#ok" />
+            </svg>
           </a>
         </li>
       </ul>
     </div>
-    <div class="footer__media footer-group">
-      <h3 class="footer-group__title">Медиа</h3>
-      <ul class="footer-group__list">
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Блог
-          </a>
-        </li>
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Информация для СМИ
-          </a>
-        </li>
-        <li class="footer-group__item">
-          <a class="footer-group__link" href="">
-            Правовая информация
-          </a>
-        </li>
-      </ul>
+    <div class="footer__group-container">
+      <section class="footer__navigation footer-group">
+        <h2 class="footer-group__title">Интернет-магазин</h3>
+          <ul class="footer-group__list">
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Каталог
+              </a>
+            </li>
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Доставка
+              </a>
+            </li>
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Способы оплаты
+              </a>
+            </li>
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                О нас
+              </a>
+            </li>
+          </ul>
+      </section>
+      <section class="footer__media footer-group">
+        <h2 class="footer-group__title">Медиа</h3>
+          <ul class="footer-group__list">
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Блог
+              </a>
+            </li>
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Информация для СМИ
+              </a>
+            </li>
+            <li class="footer-group__item">
+              <a class="footer-group__link" href="">
+                Правовая информация
+              </a>
+            </li>
+          </ul>
+      </section>
+      <section class="footer__contacts footer-group footer-group--contacts">
+        <h2 class="footer-group__title">Контакты</h3>
+          <ul class="footer-group__list footer-group__list--contacts">
+            <li class="footer-group__item footer-group__item--address">
+              <a class="footer-group__link" href="">
+                <address class="footer-group__address">
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </address>
+              </a>
+            </li>
+            <li class="footer-group__item footer-group__item--tel">
+              <a class="footer-group__link" href="tel:+79999999999">
+                +7 (999) 999-99-99
+              </a>
+            </li>
+          </ul>
+      </section>
     </div>
-    <div class="footer__contacts footer-group">
-      <h3 class="footer-group__title">Контакты</h3>
-      <ul class="footer-group__list">
-        <li class="footer-group__item footer-group__item--address">
-          <a class="footer-group__link" href="">
-            <address class="footer-group__address">
-              Санкт-Петербург, набережная реки Карповки, дом 5
-            </address>
-          </a>
-        </li>
-        <li class="footer-group__item footer-group__item--tel">
-          <a class="footer-group__link" href="tel:+79999999999">
-            +7 (999) 999-99-99
-          </a>
-        </li>
-      </ul>
-    </div>
-    <a href="" class="footer__copyright">
-      Разработано в HTML Academy
+    <a class="footer__copyright" href="">
+      <span class="footer__copyright-text">Разработано в HTML Academy</span>
+      <svg class="footer__copyright-icon" width="12" height="16" viewBox="0 0 12 16" fill="none">
+        <use href="img/icons/stack.svg#academy" />
+      </svg>
     </a>
   </footer>
   <script src="js/main.js" defer type="module"></script>

@@ -9,7 +9,11 @@ export const setMap = () => {
   mapImg.style.display = 'none';
   mapContainer.classList.remove('map__container--nojs');
 
-  const map = L.map('map').setView(COORDINATES, 18);
+  const map = L.map('map', {
+    center: COORDINATES,
+    zoom: 18,
+    scrollWheelZoom: false,
+  });
 
   const mapPin = L.icon({
     iconUrl: '../img/map-pin.svg',

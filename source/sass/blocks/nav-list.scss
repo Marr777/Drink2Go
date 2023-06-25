@@ -36,6 +36,7 @@
     @include tablet-width {
       position: static;
 
+      display: flex;
       flex-direction: row;
       width: auto;
       background-color: transparent;

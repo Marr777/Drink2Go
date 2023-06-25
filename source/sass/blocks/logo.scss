@@ -12,6 +12,8 @@
 }
 
 .logo__link {
+  width: fit-content;
+
   @include desktop-width {
     display: flex;
     align-items: center;
