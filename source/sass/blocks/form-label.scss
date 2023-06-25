@@ -8,7 +8,7 @@
 .form-label__input {
   display: none;
 
-  &:checked~.form-label__mark {
+  &:checked ~ .form-label__mark {
     &--radio {
       border-color: $primary;
 
@@ -26,13 +26,13 @@
     }
   }
 
-  &:disabled~.form-label__mark {
+  &:disabled ~ .form-label__mark {
     &--radio {
       border-color: $light-grey;
     }
   }
 
-  &:disabled~.form-label__title {
+  &:disabled ~ .form-label__title {
     color: $light-grey;
   }
 }
@@ -54,7 +54,7 @@
     height: 24px;
 
     background-color: $white;
-    border: 2px solid #BDBDBD;
+    border: 2px solid $grey;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 

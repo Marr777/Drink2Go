@@ -36,7 +36,7 @@
   color: $black;
   text-align: center;
 
-  border: 2px solid #9070EC;
+  border: 2px solid $primary-lighter;
   border-radius: 4px;
 
   &--min {
@@ -76,7 +76,7 @@
 
     border: 2px solid $primary-lighter;
     border-radius: 50%;
-    background: #FFF;
+    background: $white;
     box-shadow: none;
 
     cursor: pointer;
@@ -90,8 +90,6 @@
     }
   }
 }
-
-
 
 .slider__connect {
   background: $primary-lighter;

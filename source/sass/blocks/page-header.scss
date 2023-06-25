@@ -107,16 +107,18 @@
     .page-header__toggle-line {
       position: absolute;
       top: 50%;
+
       &--start {
         opacity: 0;
       }
+
       &--middle {
         transform: rotate(45deg);
       }
+
       &--end {
         transform: rotate(-45deg);
       }
     }
   }
 }
-

@@ -21,4 +21,3 @@ export const checkWindowSize = () => {
   checkTablet();
   window.addEventListener('resize', onWindowResize);
 }
-

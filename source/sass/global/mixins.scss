@@ -1,17 +1,17 @@
 @mixin small-screen {
-  @media(max-width: 319px) {
+  @media (max-width: 319px) {
     @content;
   }
 }
 
 @mixin tablet-width {
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin desktop-width {
-  @media(min-width: 1440px) {
+  @media (min-width: 1440px) {
     @content;
   }
 }
